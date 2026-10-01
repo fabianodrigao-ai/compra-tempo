@@ -861,3 +861,309 @@ button{
     box-sizing:border-box;
 
 }
+/* =====================================================
+   RESPONSIVIDADE - CELULAR
+   Compra Tempo V1
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        position: relative;
+        height: auto;
+        min-height: 90px;
+        padding: 12px 18px;
+        box-sizing: border-box;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 55px;
+        height: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+    /* =========================================
+       PÁGINA INICIAL
+       ========================================= */
+
+    .home {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 55px 24px 60px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .home .texto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .home h4 {
+        font-size: 15px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    .home h1 {
+        font-size: 42px;
+        line-height: 1.08;
+        margin: 0 auto 25px;
+        max-width: 390px;
+    }
+
+    .home p {
+        font-size: 18px;
+        line-height: 1.55;
+        margin: 0 auto 28px;
+        max-width: 360px;
+    }
+
+    .home .botao {
+        display: inline-block;
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 15px 24px;
+        font-size: 16px;
+    }
+
+    .home .tempo {
+        display: block;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .home .imagem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .home .ampulheta {
+        width: 180px;
+        height: 180px;
+    }
+
+    .home .ampulheta img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* =========================================
+       CALCULADORA - TELA INICIAL
+       ========================================= */
+
+    .calculadora {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 55px 24px 60px;
+        box-sizing: border-box;
+    }
+
+    .calculadora .conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .calculadora h5 {
+        font-size: 15px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    .calculadora h1 {
+        font-size: 38px;
+        line-height: 1.12;
+        margin-bottom: 22px;
+    }
+
+    .calculadora p {
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .calculadora .botao {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 15px 28px;
+        font-size: 16px;
+    }
+
+    .calculadora .tempo {
+        display: block;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .calculadora .imagem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+
+    .calculadora .imagem img {
+        width: 170px;
+        max-width: 60%;
+        height: auto;
+    }
+
+
+    /* =========================================
+       QUIZ
+       ========================================= */
+
+    #quiz {
+        min-height: auto;
+        padding: 35px 18px 50px;
+        box-sizing: border-box;
+    }
+
+    .quiz-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 28px 20px;
+        border-radius: 20px;
+    }
+
+    .quiz-box h2 {
+        font-size: 25px;
+        line-height: 1.25;
+        margin: 22px 0;
+    }
+
+    .respostas {
+        width: 100%;
+    }
+
+    .respostas button {
+        width: 100%;
+        min-height: 54px;
+        margin-bottom: 12px;
+        font-size: 16px;
+        padding: 12px 15px;
+        box-sizing: border-box;
+    }
+
+    .progresso {
+        width: 100%;
+    }
+
+    #contador {
+        font-size: 14px;
+    }
+
+
+    /* =========================================
+       RESULTADO
+       ========================================= */
+
+    #resultado {
+        min-height: auto;
+        padding: 35px 18px 60px;
+        box-sizing: border-box;
+    }
+
+    #resultado .quiz-box {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    #resultado h3 {
+        font-size: 20px;
+    }
+
+    #resultado h1 {
+        font-size: 42px;
+        line-height: 1.1;
+        word-break: normal;
+    }
+
+    #resultado p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .servicos h3 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .servicos ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .servicos li {
+        font-size: 17px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    #comprarTempo {
+        width: 100%;
+        max-width: 320px;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+
+    /* =========================================
+       TELAS PEQUENAS
+       ========================================= */
+
+    @media (max-width: 420px) {
+
+        .home h1 {
+            font-size: 38px;
+        }
+
+        .home p {
+            font-size: 17px;
+        }
+
+        .calculadora h1 {
+            font-size: 34px;
+        }
+
+        #resultado h1 {
+            font-size: 38px;
+        }
+
+        .quiz-box {
+            padding: 24px 16px;
+        }
+    }
+}
