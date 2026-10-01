@@ -1,0 +1,863 @@
+/* RESET */
+
+*{
+
+margin:0;
+
+padding:0px;
+
+box-sizing:border-box;
+
+}
+
+/* CORPO */
+
+body{
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:#F8FAFC;
+
+color:#1E293B;
+
+}
+
+/* CABEÇALHO */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#ffffff;
+
+    box-shadow:0 3px 18px rgba(0,0,0,.05);
+
+    z-index:999;
+
+}
+
+header .container{
+
+    height:82px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* LOGO */
+
+.logo img{
+
+    width:55px;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* MENU */
+
+nav{
+
+max-width:1200px;
+margin:0 auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 60px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+    color:#0B2A6B;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#10B981;
+
+}
+
+/* HOME */
+
+.home{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:90px 80px;
+
+}
+
+/* TEXTO */
+
+.texto{
+
+max-width:560px;
+
+}
+
+.texto h4{
+
+color:#10B981;
+
+letter-spacing:4px;
+
+margin-bottom:20px;
+
+}
+
+.texto h1{
+
+font-size:60px;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+}
+
+.texto p{
+
+font-size:22px;
+
+color:#64748B;
+
+line-height:1.6;
+
+margin-bottom:35px;
+
+}
+
+/* BOTÃO */
+
+.botao{
+
+display:inline-block;
+
+background:#10B981;
+
+color:white;
+
+padding:18px 40px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.botao:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* TEXTO ABAIXO */
+
+.tempo{
+
+display:block;
+
+margin-top:20px;
+
+color:#94A3B8;
+
+font-size:18px;
+
+}
+
+/* IMAGEM */
+
+.imagem{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:45%;
+
+}
+
+/* AMPULHETA */
+
+.ampulheta img{
+
+width:320px;
+
+animation:pulsar 4s ease-in-out infinite;
+
+}
+
+/* ANIMAÇÃO */
+
+@keyframes pulsar{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+/* =======================
+   ANIMAÇÃO DA LOGO
+======================= */
+
+@keyframes pulsarLogo{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+/* ============================
+   CALCULADORA
+============================ */
+
+.calculadora{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:90px 80px;
+
+    background:linear-gradient(to bottom,#f9fcff,#ffffff);
+
+}
+
+.calculadora .conteudo{
+
+    max-width:560px;
+
+}
+
+.calculadora h5{
+
+    color:#10B981;
+
+    letter-spacing:6px;
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+}
+
+.calculadora h1{
+
+    font-size:62px;
+
+    line-height:72px;
+
+    color:#082B59;
+
+    margin-bottom:30px;
+
+}
+
+.calculadora p{
+
+    font-size:24px;
+
+    line-height:40px;
+
+    color:#6B7280;
+
+    margin-bottom:40px;
+
+}
+
+.btn-comecar{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    background:#19D3C5;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-comecar:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(25,211,197,.35);
+
+}
+
+.calculadora .tempo{
+
+    display:block;
+
+    margin-top:22px;
+
+    color:#9CA3AF;
+
+}
+
+.calculadora .imagem img{
+
+    width:360px;
+
+    animation:pulsar 4s infinite ease-in-out;
+
+    filter:drop-shadow(0 0 20px rgba(16,185,129,.18));
+
+}
+/* =======================================
+   CALCULADORA - QUIZ
+======================================= */
+
+#quiz{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#F7FAFC;
+
+    padding:120px 20px 40px;
+
+}
+
+.quiz-box{
+
+    width:100%;
+
+    max-width:760px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:45px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+.progresso{
+
+    width:100%;
+
+    height:10px;
+
+    background:#E5E7EB;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:28px;
+
+}
+
+.barra{
+
+    width:8%;
+
+    height:100%;
+
+    background:#10B981;
+
+    border-radius:30px;
+
+    transition:.4s;
+
+}
+#contador{
+    display:block;
+    color:#6B7280;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+#pergunta{
+    font-size:36px;
+    line-height:1.3;
+    color:#0F172A;
+    margin-bottom:35px;
+}
+
+.respostas{
+    display:grid;
+    gap:18px;
+}
+
+.respostas button{
+    width:100%;
+    padding:18px 22px;
+    border:none;
+    border-radius:14px;
+    background:#F8FAFC;
+    border:2px solid #E5E7EB;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    text-align:left;
+}
+
+.respostas button:hover{
+    border-color:#10B981;
+    background:#ECFDF5;
+    transform:translateY(-2px);
+}
+#resultado{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    background:#eef7fb;
+    padding:140px 20px 80px;
+    box-sizing: border-box;
+}
+
+#resultado .quiz-box{
+    background:#fff;
+    width:700px;
+    max-width:90%;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+#resultado h3{
+    color:#1ec9b7;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+#tempoFinal{
+    font-size:56px;
+    color:#082b68;
+    margin:20px 0;
+}
+
+#tempoAno{
+    font-size:22px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+#resultado h2{
+    color:#082b68;
+    margin:30px 0 15px;
+    line-height:1.4;
+}
+
+#resultado p{
+    color:#666;
+    line-height:1.7;
+}
+
+#comprarTempo{
+    margin-top:35px;
+    background:#1ec9b7;
+    color:white;
+    border:none;
+    padding:18px 40px;
+    border-radius:40px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#comprarTempo:hover{
+    transform:scale(1.05);
+}
+
+#refazer{
+    margin-top:20px;
+    background:white;
+    border:2px solid #1ec9b7;
+    color:#1ec9b7;
+    padding:15px 35px;
+    border-radius:40px;
+    cursor:pointer;
+}
+.servicos ul{
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.servicos li{
+    margin: 8px 0;
+    font-size: 20px;
+    color: #23406f;
+}
+/* ========================= */
+/* CABEÇALHO PADRÃO */
+/* ========================= */
+
+
+nav{
+
+width:1200px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 30px;
+
+}
+
+.logo{
+
+width:80px;
+
+height:auto;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:40px;
+
+list-style:none;
+
+margin:0;
+
+padding:0;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+font-weight:600;
+
+font-size:18px;
+
+color:#1E2A78;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#1ECAD3;
+
+}
+.pagina{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+}
+
+.pagina .quiz-box{
+    max-width:650px;
+    width:100%;
+    text-align:center;
+}
+.pagina input{
+
+    width:100%;
+    padding:16px;
+
+    margin-top:18px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+.pagina button{
+
+    margin-top:30px;
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:35px;
+
+    background:#2bd9de;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+select{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:18px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:10px;
+
+    text-align:left;
+
+    font-size:16px;
+
+}
+
+h4{
+
+    margin-top:30px;
+
+    margin-bottom:10px;
+
+    text-align:left;
+
+    color:#1d2d5a;
+
+}
+
+.observacao{
+
+    margin-top:25px;
+
+    font-size:14px;
+
+    color:#666;
+
+}
+.subtitulo{
+    margin:15px 0 30px;
+    color:#666;
+    font-size:18px;
+    line-height:1.5;
+}
+
+select{
+    margin-bottom:30px;
+}
+
+label{
+    margin-bottom:12px;
+}
+
+button{
+    margin-top:30px;
+}
+.formulario{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.formulario input,
+.formulario select{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:18px;
+
+    border:1px solid #dddddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+
+.formulario h4{
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    text-align:left;
+
+    color:#17336b;
+
+}
+
+.formulario label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+}
+
+.formulario button{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#28d8dd;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.formulario .observacao{
+
+    margin-top:25px;
+
+    color:#666;
+
+    font-size:15px;
+
+    text-align:center;
+
+}
+/* =================================
+   PÁGINA VENDER TEMPO
+================================= */
+
+.resultado{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:140px 20px 80px;
+
+    box-sizing:border-box;
+
+}

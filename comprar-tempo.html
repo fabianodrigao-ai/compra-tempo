@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comprar Tempo</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<img src="img/logo.svg" class="logo">
+
+<ul>
+
+<li><a href="calculadora.html">Calculadora</a></li>
+<li><a href="#">Comprar Tempo</a></li>
+<li><a href="vender-tempo.html">Vender Tempo</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="pagina">
+
+<div class="quiz-box">
+
+<h1>EM BREVE</h1>
+
+<h2>Recupere seu tempo.</h2>
+
+<p class="subtitulo">
+Seja um dos primeiros usuários da plataforma Compra Tempo.
+</p>
+
+<input
+    type="text"
+    id="nome"
+    placeholder="Seu nome"
+>
+
+<br><br>
+
+<input
+    type="tel"
+    id="whatsapp"
+    placeholder="WhatsApp"
+>
+
+<br><br>
+
+<input
+    type="email"
+    id="email"
+    placeholder="E-mail (opcional)"
+>
+
+<br><br>
+
+<button id="btnComprarTempo">
+
+Quero ser avisado no lançamento
+
+</button>
+
+<p id="mensagemCadastro" style="display:none; margin-top:20px; color:#10B981; font-weight:bold;">
+Cadastro recebido! Obrigado por fazer parte do Compra Tempo.
+</p>
+
+</div>
+
+<script>
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzDZwFOVDj_xXW9n2GdQOVA_Bk6l6lSJByz1uzsURdjB4h86tP-hpXjesAv8dPlTxOf/exec";
+
+document.getElementById("btnComprarTempo").addEventListener("click", function(){
+
+    const nome = document.getElementById("nome").value.trim();
+    const whatsapp = document.getElementById("whatsapp").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if(!nome || !whatsapp){
+
+        alert("Por favor, informe seu nome e WhatsApp.");
+
+        return;
+    }
+
+    const dados = {
+        tipo: "Comprar Tempo",
+        nome: nome,
+        whatsapp: whatsapp,
+        email: email
+    };
+
+    fetch(SCRIPT_URL, {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "text/plain;charset=UTF-8"
+        },
+
+        body: JSON.stringify(dados),
+
+        mode: "no-cors"
+
+    });
+
+    document.getElementById("mensagemCadastro").style.display = "block";
+
+document.getElementById("btnComprarTempo").style.display = "none";
+
+document.getElementById("nome").disabled = true;
+document.getElementById("whatsapp").disabled = true;
+document.getElementById("email").disabled = true;
+
+setTimeout(function(){
+
+    window.location.href = "index.html";
+
+}, 3000);
+
+});
+
+</script>
+
+</section>
+
+</body>
+
+</html>

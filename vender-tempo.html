@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vender Tempo | Compra Tempo</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<img src="img/logo.svg" class="logo">
+
+<ul>
+
+<li><a href="calculadora.html">Calculadora</a></li>
+<li><a href="comprar-tempo.html">Comprar Tempo</a></li>
+<li><a href="vender-tempo.html">Vender Tempo</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="resultado">
+
+<div class="quiz-box formulario">
+
+<h3>EM BREVE</h3>
+
+<h1>Ganhe dinheiro com seu tempo.</h1>
+
+<p class="subtitulo">
+Cadastre-se para ser um dos primeiros parceiros da plataforma Compra Tempo.
+</p>
+
+<input
+    type="text"
+    id="nome"
+    placeholder="Seu nome"
+>
+<input
+    type="email"
+    id="email"
+    placeholder="E-mail (opcional)"
+>
+<input
+    type="tel"
+    id="whatsapp"
+    placeholder="WhatsApp"
+>
+<input
+    type="text"
+    id="cidade"
+    placeholder="Cidade"
+>
+
+<select id="servico">
+
+<option value="">Qual serviço deseja oferecer?</option>
+
+<option value="Limpeza residencial">Limpeza residencial</option>
+
+<option value="Preparação de refeições">Preparação de refeições</option>
+
+<option value="Lavagem e passadoria">Lavagem e passadoria</option>
+
+<option value="Compras de supermercado">Compras de supermercado</option>
+
+<option value="Motorista particular">Motorista particular</option>
+
+<option value="Cuidados com pets">Cuidados com pets</option>
+
+<option value="Cuidador de idosos">Cuidador de idosos</option>
+
+<option value="Assistente pessoal">Assistente pessoal</option>
+
+</select>
+
+<h4>Disponibilidade</h4>
+
+<label>
+<input type="checkbox" value="Manhã">
+Manhã
+</label>
+
+<label>
+<input type="checkbox" value="Tarde">
+Tarde
+</label>
+
+<label>
+<input type="checkbox" value="Noite">
+Noite
+</label>
+
+<label>
+<input type="checkbox" value="Finais de semana">
+Finais de semana
+</label>
+
+<button id="btnVenderTempo">
+Quero ser parceiro fundador
+</button>
+
+<p id="mensagemCadastro" style="display:none; margin-top:20px; color:#10B981; font-weight:bold;">
+Cadastro recebido! Obrigado por fazer parte do Compra Tempo.
+</p>
+
+<p class="observacao">
+Não cobraremos nenhuma taxa nesta fase. Estamos formando nossa comunidade inicial de parceiros para validar o Compra Tempo.
+</p>
+
+</div>
+
+<script>
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzDZwFOVDj_xXW9n2GdQOVA_Bk6l6lSJByz1uzsURdjB4h86tP-hpXjesAv8dPlTxOf/exec";
+
+document.getElementById("btnVenderTempo").addEventListener("click", function(){
+
+    const nome = document.getElementById("nome").value.trim();
+
+    const whatsapp = document.getElementById("whatsapp").value.trim();
+
+    const email = document.getElementById("email").value.trim();
+
+    const cidade = document.getElementById("cidade").value.trim();
+
+    const servico = document.getElementById("servico").value;
+
+    const disponibilidadeSelecionada = [];
+
+    document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(checkbox){
+
+        disponibilidadeSelecionada.push(checkbox.value);
+
+    });
+
+    const disponibilidade = disponibilidadeSelecionada.join(", ");
+
+    if(!nome || !whatsapp || !cidade || !servico){
+
+        alert("Por favor, preencha seu nome, WhatsApp, cidade e escolha um serviço.");
+
+        return;
+
+    }
+
+    if(disponibilidadeSelecionada.length === 0){
+
+        alert("Selecione pelo menos uma opção de disponibilidade.");
+
+        return;
+
+    }
+
+    const dados = {
+
+        tipo: "Vender Tempo",
+
+        nome: nome,
+
+        whatsapp: whatsapp,
+
+        email: email,
+
+        cidade: cidade,
+
+        servico: servico,
+
+        disponibilidade: disponibilidade
+
+    };
+
+    fetch(SCRIPT_URL, {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "text/plain;charset=UTF-8"
+        },
+
+        body: JSON.stringify(dados),
+
+        mode: "no-cors"
+
+    });
+
+    document.getElementById("mensagemCadastro").style.display = "block";
+
+    document.getElementById("btnVenderTempo").style.display = "none";
+
+    document.getElementById("nome").disabled = true;
+    document.getElementById("whatsapp").disabled = true;
+    document.getElementById("email").disabled = true;
+    document.getElementById("cidade").disabled = true;
+    document.getElementById("servico").disabled = true;
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox){
+
+        checkbox.disabled = true;
+
+    });
+
+    setTimeout(function(){
+
+        window.location.href = "index.html";
+
+    }, 3000);
+
+});
+
+</script>
+
+</section>
+
+</body>
+
+</html>
